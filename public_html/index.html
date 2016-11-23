@@ -9,6 +9,14 @@
     </head>
     <body onload="iniciar();">
         <h1>Cronòmetre</h1>
-        <div>TODO write content</div>
+        <div id="pantalla"><span id="segons"></span> : <span id="minuts"></span></div>
+        <br />
+        <div id="botons">
+            <input type="button" id="comenca" value="Play!" onclick="play();" />
+            <input type="button" id="pausador" value="Pausa" />
+            <input type="button" id="marcador" value="Marca!!" />
+        </div>
+        <hr />
+        <div id="marques">Marques: <span id="marca"></span></div>
     </body>
 </html>
