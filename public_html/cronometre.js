@@ -16,7 +16,7 @@ marcador.addEventListener('click', marcadors);*/
     marcador.onclick = marcadors();*/
 
 function iniciar() {
-    status = false;//Comença aturat
+    //status = false;//Comença aturat
     data.setSeconds(0, 0);
     segons = data.getSeconds();
     mil = data.getMilliseconds();   
@@ -27,24 +27,24 @@ function iniciar() {
 }
 
 function play() {
-    //status = true;
     
-    //clearInterval();
-    setInterval(data.setMilliseconds(1), 1000);
-    document.getElementById('segons').innerHTML = segons;
-    document.getElementById('minuts').innerHTML = mil;
-    console.log(segons);
-    /*do{
+    function temporitzador () {
+        /*var data = new Date();
+        segons = data.getSeconds();
+        mil = data.getMilliseconds();*/
+        data.setMilliseconds(1);
         
-    }while(status);*/
+        document.getElementById('segons').innerHTML = segons;
+        document.getElementById('minuts').innerHTML = mil;
+    }
+    status = setInterval(temporitzador, 1000);
     
 }
 
 
 function pausa() {
     
-    status = true;
-    clearInterval();
+    status = clearInterval();
     
 }
 
