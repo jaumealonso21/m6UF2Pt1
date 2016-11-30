@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="cronometre.css" />
-    <script src="cronometre.js"></script>
+    <script src="cronometre2.js"></script>
   </head>
   <body onload="iniciCrono('segons', 'mil');">
     <div id="content">
@@ -15,7 +15,7 @@
       </p>
       <p class="botones">
         <input id="inici" type="button"  value="Start!" onclick="iniciReinici('segons', 'mil')" />
-        <input id="pausa" type="button"  value="Pausa" onclick="pausaContinua('segons', 'mil')" hidden="hidden" />
+        <input id="pausa" type="button"  value="Pausa/Continua" onclick="pausaContinua('segons', 'mil')" />
       </p>
       <table class="marques" hidden="hidden" id="marques"></table>
     </div>
