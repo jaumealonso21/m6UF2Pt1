@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+             #myCanvas { border:1px solid black;}
+        </style>
+        
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <canvas id="myCanvas" width="300" height="225">
+            Contingut que es mostrarà en cas de que el navegador no pugui mostrar l’element canvas.
+        </canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(20,30,80,150);
+            ctx.strokeStyle='blue';
+            ctx.strokeRect(10,10,200,200); 
+        </script>
+    </body>
+</html>

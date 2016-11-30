@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cronòmetre</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cronometre.css" />
+    <script src="cronometre_1.js"></script>
+  </head>
+  <body onload="crono('segons', 'mil', 'inici', 'pausa', 'marques');">
+    <div id="content">
+      <h1>Cronòmetre</h1>
+      <p class="pantalla">
+        <span id="segons"></span> : <span id="mil"></span>
+      </p>
+      <p class="botones">
+        <input id="inici" type="button"  value="Start!" />
+        <input id="pausa" type="button"  value="Pausa/Continua" />
+      </p>
+      <table class="marques" id="marques"></table>
+    </div>
+  </body>
+</html>

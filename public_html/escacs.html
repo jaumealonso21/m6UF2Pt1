@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Escacs</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="escacs.css" />
+        <script src="escacs.js"></script>
+    </head>
+    <body onload="escacsJoc();">
+        <div id="content">
+            <h1>Escacs</h1>
+            <div class="botones" id="botones">
+                <label>Widht: </label><input type="text" id="amplada" value="600" />
+                <label>Height: </label><input type="text" id="alcada" value="600" />
+                <label>Color: </label><input type="text" id="color" value="pink" />
+                <input type="button" id="boto" value="start" />
+            </div>
+            <canvas id="escacs" width="0" height="0">
+                Aquest navegador no accepta l'element canvas, CANVIA DE NAVEGADOR!!!!!!!!!
+            </canvas>
+        </div>    
+    </body>
+</html>

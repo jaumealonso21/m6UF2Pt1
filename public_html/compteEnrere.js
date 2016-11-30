@@ -35,7 +35,7 @@ function compteEnrere(textDataEnt, textTimeEnt, botonEnt, resultatEnt) {
     }
     
     function comparaDates() {
-        var fecha=new Date('2012','1','10','21','00','00');
+        //var fecha=new Date('2012','1','10','21','00','00');
         
         var hoy=new Date();
         var dias=0;
@@ -47,7 +47,9 @@ function compteEnrere(textDataEnt, textTimeEnt, botonEnt, resultatEnt) {
         if (dataRecollida>hoy){
             //var diferencia=(fecha.getTime()-hoy.getTime())/1000;
             var diferencia=(dataRecollida.getTime()-hoy.getTime())/1000;
-            meses =Math.floor(diferencia);
+            //Treballa ----------var days = Math.floor(diff / (1000 * 60 * 60 * 24*));
+            anys=Math.floor(diferencia/8);
+            meses =Math.floor(diferencia/12);
             dias=Math.floor(diferencia/86400);
             diferencia=diferencia-(86400*dias);
             horas=Math.floor(diferencia/3600);
@@ -64,6 +66,7 @@ function compteEnrere(textDataEnt, textTimeEnt, botonEnt, resultatEnt) {
         }
         else{
             //document.getElementById('restante').innerHTML='Quedan ' + dias + ' D&iacute;as, ' + horas + ' Horas, ' + minutos + ' Minutos, ' + segundos + ' Segundos'
+            
         }
         var d = new Date(0);//Data inicial
         Date.parse(d);//A mil.lisegons
