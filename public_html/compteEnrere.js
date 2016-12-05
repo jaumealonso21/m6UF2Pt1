@@ -46,16 +46,18 @@ function compteEnrere(textDataEnt, textTimeEnt, botonEnt, resultatEnt) {
         //if (fecha>hoy){
         if (dataRecollida>hoy){
             //var diferencia=(fecha.getTime()-hoy.getTime())/1000;
-            var diferencia=(dataRecollida.getTime()-hoy.getTime())/1000;
+            var diferencia=(dataRecollida.getTime() - hoy.getTime())/1000;
             //Treballa ----------var days = Math.floor(diff / (1000 * 60 * 60 * 24*));
-            anys=Math.floor(diferencia/8);
+            /*anys = Date(diferencia) - 1970;
+            diferencia = diferencia - (8*anys);
             meses =Math.floor(diferencia/12);
+            diferencia = diferencia - (12*meses);*/
             dias=Math.floor(diferencia/86400);
-            diferencia=diferencia-(86400*dias);
+            diferencia=diferencia - (86400*dias);
             horas=Math.floor(diferencia/3600);
-            diferencia=diferencia-(3600*horas);
+            diferencia=diferencia - (3600*horas);
             minutos=Math.floor(diferencia/60);
-            diferencia=diferencia-(60*minutos);
+            diferencia=diferencia - (60*minutos);
             segundos=Math.floor(diferencia);
 
             //document.getElementById(id).innerHTML='Quedan ' + dias + ' D&iacute;as, ' + horas + ' Horas, ' + minutos + ' Minutos, ' + segundos + ' Segundos'
@@ -95,7 +97,7 @@ function compteEnrere(textDataEnt, textTimeEnt, botonEnt, resultatEnt) {
         
         /*resultat.innerHTML = "Falten: " + any + " any(s), " + mes + " mes(os) i " + dia + " dia(es)<br />\n"
             + hora + " hora(es) " + minut + " minut(s) " + segon + " segon(s)";*/
-    resultat.innerHTML = "Falten: " + any + " any(s), " + mes + " mes(os) i " + dias + " dia(es)<br />\n"
+    resultat.innerHTML = "Falten: " + /*anys*/ + " any(s), " + /*meses*/  + " mes(os) i " + dias + " dia(es)<br />\n"
             + horas + " hora(es) " + minutos + " minut(s) " + segundos + " segon(s)";
     }/*resultat.innerHTML = "Falten: " + compDate.getFullYear() + " any(s), " + compDate.getMonth() + " mes(os) i " + compDate.getDay() + " dia(es)<br />\n"
             + compDate.getHours() + " hora(es) " + compDate.getMinutes() + " minut(s) " + compDate.getMilliseconds() + " segon(s)";*/

@@ -24,17 +24,22 @@ var boto=document.getElementById('boto');
     }
     
     function tauler() {
-        var i = 0, j = 0, x = 0, y = 0;
-        for(i; i < 8; i++){//Num de caselles
-            for(j; j < 8; j++){//Num de caselles
-                if(j%2>0){
-                   casella(color.value, x, y, escacs.width/8, escacs.height/8); 
+        var amp = escacs.width/8;
+        var alc = escacs.height/8;
+        var x = 0, y = 0, t = 0;//t controla les caselles par/impar
+        for(i = 0; i < 8; i++){//Num de caselles
+            for(j = 0; j < 8; j++){//Num de caselles          
+                if(t % 2 > 0){
+                   casella(color.value, x, y, amp, alc); 
                 }
-                x += escacs.width/8;
+                x += amp;
+                t++;
             }
+            t = 1;//Comença la casella top/left en blanc
+            t += i;
+            console.log(t);
             x = 0;
-            y += escacs.height/8;
-            console.log(y);
+            y += alc;
         }
     }
     
